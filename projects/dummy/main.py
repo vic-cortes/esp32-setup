@@ -1,12 +1,14 @@
-import pycom
 import time
 
-pycom.heartbeat(False)
+from machine import Pin
+
+# El LED en el ESP32-C3 Super Mini suele estar conectado al GPIO 8
+led = Pin(8, Pin.OUT)
+
+print("Iniciando parpadeo del LED...")
 
 while True:
-    pycom.rgbled(0xFF0000)  # Red
-    time.sleep(1)
-    pycom.rgbled(0x00FF00)  # Green
-    time.sleep(1)
-    pycom.rgbled(0x0000FF)  # Blue
-    time.sleep(1)
+    led.value(1)  # Encender el LED
+    time.sleep(0.5)  # Esperar medio segundo
+    led.value(0)  # Apagar el LED
+    time.sleep(0.5)  # Esperar medio segundo
