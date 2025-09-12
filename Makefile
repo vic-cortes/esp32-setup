@@ -23,3 +23,9 @@ FULL_PATH_TO_MICROPYTHON ?= ${PATH_TO_MICROPYTHON}/${DEFAULT_MICROPYTHON_VERSION
 install_micropython: port
 	@echo "Installing MicroPython firmware..."
 	esptool.py --port ${port} --baud 460800 write-flash 0 ${FULL_PATH_TO_MICROPYTHON}
+
+# Micropy
+
+install_micropy_stubs:
+	@echo "Installing MicroPython stubs..."
+	micropy stubs add esp32-micropython-1.26.1

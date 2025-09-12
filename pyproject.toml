@@ -6,4 +6,5 @@ requires-python = ">=3.11,<3.12"
 dependencies = [
     "esptool>=5.0.2",
     "micropy-cli>=4.2.2",
+    "setuptools==80.0.0",
 ]
