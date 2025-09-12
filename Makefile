@@ -29,3 +29,7 @@ install_micropython: port
 install_micropy_stubs:
 	@echo "Installing MicroPython stubs..."
 	micropy stubs add esp32-micropython-1.26.1
+
+install_latest_micropy_stubs:
+	@echo "Installing latest MicroPython stubs..."
+	uv add micropython-esp32-stubs
