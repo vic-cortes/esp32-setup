@@ -4,13 +4,13 @@ A Python-based utility for managing and programming ESP32 microcontrollers using
 
 ## Requirements
 
-- Python 3.12 or higher
+- Python 3.11 or higher
 - uv package manager
 - ESP32 development board
 
 ## Installation
 
-1. Make sure you have Python 3.12+ installed:
+1. Make sure you have Python 3.11 installed:
    ```bash
    python --version
    ```
